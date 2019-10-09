@@ -6,10 +6,10 @@ def get_k_polynomial_with_d_features(feature_set, k):
     A = feature_set[0] ** 0
     numOfSamples=feature_set.shape[1]
     if k==0:
-        return A
+        return A.T
     A=np.vstack((A, feature_set))
     if k==1:
-        return A
+        return A.T
     previous_new_terms=feature_set.copy()
     for i in range(2, k+1):
         current_new_terms = []
